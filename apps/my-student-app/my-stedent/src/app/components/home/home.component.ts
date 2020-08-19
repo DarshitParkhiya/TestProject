@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestModel } from '../../models/requestModel';
 import { RequestTypeService } from '../../services/request-type.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -41,7 +42,11 @@ export class HomeComponent implements OnInit {
   ];
   list2 = [];
 
-  constructor(private requestTypeService: RequestTypeService) {}
+  constructor(
+    private requestTypeService: RequestTypeService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.requestTypeService.getAllRequestType().subscribe((res) => {
@@ -87,9 +92,12 @@ export class HomeComponent implements OnInit {
     });
     this.request.IsActive = true;
     console.log('***********', this.request);
-    // this.requestTypeService.createRequest(this.request).subscribe((res) => {
-    //   console.log(res);
-    // });
+    this.requestTypeService.createRequest(this.request).subscribe((res) => {
+      console.log(res);
+    });
+    this.router.navigate(['./dashboard'], {
+      relativeTo: this.route,
+    });
   }
 
   onCancel() {}

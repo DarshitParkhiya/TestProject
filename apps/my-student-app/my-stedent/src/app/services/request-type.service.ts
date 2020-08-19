@@ -25,6 +25,10 @@ export class RequestTypeService {
     );
   }
 
+  getAllRequest(): Observable<RequestModel[]> {
+    return this.http.get<RequestModel[]>(`${this.request}/get`);
+  }
+
   createRequest(alarm: RequestModel): Observable<RequestModel> {
     return this.http.post<RequestModel>(
       `${this.request}/create`,
