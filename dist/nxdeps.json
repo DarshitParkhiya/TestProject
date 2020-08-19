@@ -1,0 +1,1333 @@
+{
+  "version": "1",
+  "projectGraph": {
+    "nodes": {
+      "my-student-app/my-stedent-e2e": {
+        "name": "my-student-app/my-stedent-e2e",
+        "type": "e2e",
+        "data": {
+          "root": "apps/my-student-app/my-stedent-e2e",
+          "sourceRoot": "apps/my-student-app/my-stedent-e2e/src",
+          "projectType": "application",
+          "architect": {
+            "e2e": {
+              "builder": "@nrwl/cypress:cypress",
+              "options": {
+                "cypressConfig": "apps/my-student-app/my-stedent-e2e/cypress.json",
+                "tsConfig": "apps/my-student-app/my-stedent-e2e/tsconfig.e2e.json",
+                "devServerTarget": "my-student-app-my-stedent:serve"
+              },
+              "configurations": {
+                "production": {
+                  "devServerTarget": "my-student-app-my-stedent:serve:production"
+                }
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/my-student-app/my-stedent-e2e/tsconfig.e2e.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/my-student-app/my-stedent-e2e/**/*"
+                ]
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/cypress.json",
+              "ext": ".json",
+              "mtime": 1593778845658.843
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/src/fixtures/example.json",
+              "ext": ".json",
+              "mtime": 1593778845660.432
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/src/integration/app.spec.ts",
+              "ext": ".ts",
+              "mtime": 1593778845661.173
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/src/plugins/index.js",
+              "ext": ".js",
+              "mtime": 1593778845662.086
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/src/support/app.po.ts",
+              "ext": ".ts",
+              "mtime": 1593778845663.032
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/src/support/commands.ts",
+              "ext": ".ts",
+              "mtime": 1593778845663.579
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/src/support/index.ts",
+              "ext": ".ts",
+              "mtime": 1593778845664.105
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/tsconfig.e2e.json",
+              "ext": ".json",
+              "mtime": 1593778845659.192
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1593778845659.55
+            },
+            {
+              "file": "apps/my-student-app/my-stedent-e2e/tslint.json",
+              "ext": ".json",
+              "mtime": 1593778845658.523
+            }
+          ]
+        }
+      },
+      "my-student-app-my-stedent": {
+        "name": "my-student-app-my-stedent",
+        "type": "app",
+        "data": {
+          "projectType": "application",
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "root": "apps/my-student-app/my-stedent",
+          "sourceRoot": "apps/my-student-app/my-stedent/src",
+          "prefix": "app",
+          "architect": {
+            "build": {
+              "builder": "@angular-devkit/build-angular:browser",
+              "options": {
+                "outputPath": "dist/apps/my-student-app/my-stedent",
+                "index": "apps/my-student-app/my-stedent/src/index.html",
+                "main": "apps/my-student-app/my-stedent/src/main.ts",
+                "polyfills": "apps/my-student-app/my-stedent/src/polyfills.ts",
+                "tsConfig": "apps/my-student-app/my-stedent/tsconfig.app.json",
+                "aot": true,
+                "assets": [
+                  "apps/my-student-app/my-stedent/src/favicon.ico",
+                  "apps/my-student-app/my-stedent/src/assets"
+                ],
+                "styles": [
+                  "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+                  "apps/my-student-app/my-stedent/src/styles.scss"
+                ],
+                "scripts": []
+              },
+              "configurations": {
+                "production": {
+                  "fileReplacements": [
+                    {
+                      "replace": "apps/my-student-app/my-stedent/src/environments/environment.ts",
+                      "with": "apps/my-student-app/my-stedent/src/environments/environment.prod.ts"
+                    }
+                  ],
+                  "optimization": true,
+                  "outputHashing": "all",
+                  "sourceMap": false,
+                  "extractCss": true,
+                  "namedChunks": false,
+                  "extractLicenses": true,
+                  "vendorChunk": false,
+                  "buildOptimizer": true,
+                  "budgets": [
+                    {
+                      "type": "initial",
+                      "maximumWarning": "2mb",
+                      "maximumError": "5mb"
+                    },
+                    {
+                      "type": "anyComponentStyle",
+                      "maximumWarning": "6kb",
+                      "maximumError": "10kb"
+                    }
+                  ]
+                }
+              }
+            },
+            "serve": {
+              "builder": "@angular-devkit/build-angular:dev-server",
+              "options": {
+                "browserTarget": "my-student-app-my-stedent:build"
+              },
+              "configurations": {
+                "production": {
+                  "browserTarget": "my-student-app-my-stedent:build:production"
+                }
+              }
+            },
+            "extract-i18n": {
+              "builder": "@angular-devkit/build-angular:extract-i18n",
+              "options": {
+                "browserTarget": "my-student-app-my-stedent:build"
+              }
+            },
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "apps/my-student-app/my-stedent/tsconfig.app.json",
+                  "apps/my-student-app/my-stedent/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!apps/my-student-app/my-stedent/**/*"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "apps/my-student-app/my-stedent/jest.config.js",
+                "tsConfig": "apps/my-student-app/my-stedent/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "apps/my-student-app/my-stedent/src/test-setup.ts"
+              }
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "apps/my-student-app/my-stedent/browserslist",
+              "ext": "",
+              "mtime": 1593778845652.933
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/jest.config.js",
+              "ext": ".js",
+              "mtime": 1593778845657.2
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/app-routing.module.ts",
+              "ext": ".ts",
+              "mtime": 1597812554300.49
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/app.component.html",
+              "ext": ".html",
+              "mtime": 1597812554327.374
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/app.component.scss",
+              "ext": ".scss",
+              "mtime": 1580372164333.633
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/app.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1597812554333.257
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/app.component.ts",
+              "ext": ".ts",
+              "mtime": 1597812554343.154
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/app.module.ts",
+              "ext": ".ts",
+              "mtime": 1597812554348.354
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.css",
+              "ext": ".css",
+              "mtime": 1597219269685.458
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.html",
+              "ext": ".html",
+              "mtime": 1597219269686.102
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1597219269685.816
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.ts",
+              "ext": ".ts",
+              "mtime": 1597219269686.292
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.html",
+              "ext": ".html",
+              "mtime": 1593941445917.637
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.scss",
+              "ext": ".scss",
+              "mtime": 1593941445917.044
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1593941445917.934
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.ts",
+              "ext": ".ts",
+              "mtime": 1593941445918.207
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.html",
+              "ext": ".html",
+              "mtime": 1597814320511.9597
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.scss",
+              "ext": ".scss",
+              "mtime": 1597814320511.826
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1593941403335.196
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.ts",
+              "ext": ".ts",
+              "mtime": 1593941403335.523
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/assets/.gitkeep",
+              "ext": "",
+              "mtime": 1593778845654.514
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/environments/environment.prod.ts",
+              "ext": ".ts",
+              "mtime": 1597812554353.499
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/environments/environment.ts",
+              "ext": ".ts",
+              "mtime": 1597812554358.773
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/favicon.ico",
+              "ext": ".ico",
+              "mtime": 1597812554383.293
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/index.html",
+              "ext": ".html",
+              "mtime": 1597812554389.158
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/main.ts",
+              "ext": ".ts",
+              "mtime": 1597812554393.11
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/polyfills.ts",
+              "ext": ".ts",
+              "mtime": 1597812554412.935
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/styles.scss",
+              "ext": ".scss",
+              "mtime": 1597813871412.6262
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1593778845658.012
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/tsconfig.app.json",
+              "ext": ".json",
+              "mtime": 1593778845653.126
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1593778845652.292
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1593778845657.619
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/tslint.json",
+              "ext": ".json",
+              "mtime": 1593778845653.338
+            }
+          ]
+        }
+      },
+      "theme": {
+        "name": "theme",
+        "type": "lib",
+        "data": {
+          "projectType": "library",
+          "root": "libs/theme",
+          "sourceRoot": "libs/theme/src",
+          "prefix": "app",
+          "architect": {
+            "lint": {
+              "builder": "@angular-devkit/build-angular:tslint",
+              "options": {
+                "tsConfig": [
+                  "libs/theme/tsconfig.lib.json",
+                  "libs/theme/tsconfig.spec.json"
+                ],
+                "exclude": [
+                  "**/node_modules/**",
+                  "!libs/theme/**/*"
+                ]
+              }
+            },
+            "test": {
+              "builder": "@nrwl/jest:jest",
+              "options": {
+                "jestConfig": "libs/theme/jest.config.js",
+                "tsConfig": "libs/theme/tsconfig.spec.json",
+                "passWithNoTests": true,
+                "setupFile": "libs/theme/src/test-setup.ts"
+              }
+            }
+          },
+          "schematics": {
+            "@nrwl/angular:component": {
+              "style": "scss"
+            }
+          },
+          "tags": [],
+          "files": [
+            {
+              "file": "libs/theme/README.md",
+              "ext": ".md",
+              "mtime": 1593781079769.765
+            },
+            {
+              "file": "libs/theme/jest.config.js",
+              "ext": ".js",
+              "mtime": 1593781079867.61
+            },
+            {
+              "file": "libs/theme/src/index.ts",
+              "ext": ".ts",
+              "mtime": 1593781079840.348
+            },
+            {
+              "file": "libs/theme/src/lib/components/header/header.component.html",
+              "ext": ".html",
+              "mtime": 1593935972214.137
+            },
+            {
+              "file": "libs/theme/src/lib/components/header/header.component.scss",
+              "ext": ".scss",
+              "mtime": 1593847293016.963
+            },
+            {
+              "file": "libs/theme/src/lib/components/header/header.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1593781428257.232
+            },
+            {
+              "file": "libs/theme/src/lib/components/header/header.component.ts",
+              "ext": ".ts",
+              "mtime": 1593935972215.352
+            },
+            {
+              "file": "libs/theme/src/lib/components/layout/layout.component.html",
+              "ext": ".html",
+              "mtime": 1593935972216.971
+            },
+            {
+              "file": "libs/theme/src/lib/components/layout/layout.component.scss",
+              "ext": ".scss",
+              "mtime": 1593930542601.519
+            },
+            {
+              "file": "libs/theme/src/lib/components/layout/layout.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1593870393111.599
+            },
+            {
+              "file": "libs/theme/src/lib/components/layout/layout.component.ts",
+              "ext": ".ts",
+              "mtime": 1593935972218.654
+            },
+            {
+              "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.html",
+              "ext": ".html",
+              "mtime": 1597814145340.3164
+            },
+            {
+              "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.scss",
+              "ext": ".scss",
+              "mtime": 1593930539430.854
+            },
+            {
+              "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1593871098980.334
+            },
+            {
+              "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.ts",
+              "ext": ".ts",
+              "mtime": 1593941522181.135
+            },
+            {
+              "file": "libs/theme/src/lib/styles/all.scss",
+              "ext": ".scss",
+              "mtime": 1597813881090.153
+            },
+            {
+              "file": "libs/theme/src/lib/styles/core/_grid.scss",
+              "ext": ".scss",
+              "mtime": 1593868527638
+            },
+            {
+              "file": "libs/theme/src/lib/styles/core/core.scss",
+              "ext": ".scss",
+              "mtime": 1593869671150.62
+            },
+            {
+              "file": "libs/theme/src/lib/theme.module.ts",
+              "ext": ".ts",
+              "mtime": 1593941132731.298
+            },
+            {
+              "file": "libs/theme/src/test-setup.ts",
+              "ext": ".ts",
+              "mtime": 1593781079869.782
+            },
+            {
+              "file": "libs/theme/tsconfig.json",
+              "ext": ".json",
+              "mtime": 1593781079865.548
+            },
+            {
+              "file": "libs/theme/tsconfig.lib.json",
+              "ext": ".json",
+              "mtime": 1593781079771.73
+            },
+            {
+              "file": "libs/theme/tsconfig.spec.json",
+              "ext": ".json",
+              "mtime": 1593781079868.838
+            },
+            {
+              "file": "libs/theme/tslint.json",
+              "ext": ".json",
+              "mtime": 1593781079832.677
+            }
+          ]
+        }
+      },
+      "npm:@angular/animations": {
+        "type": "npm",
+        "name": "npm:@angular/animations",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/animations",
+          "files": []
+        }
+      },
+      "npm:@angular/cdk": {
+        "type": "npm",
+        "name": "npm:@angular/cdk",
+        "data": {
+          "version": "^9.2.4",
+          "packageName": "@angular/cdk",
+          "files": []
+        }
+      },
+      "npm:@angular/common": {
+        "type": "npm",
+        "name": "npm:@angular/common",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/common",
+          "files": []
+        }
+      },
+      "npm:@angular/compiler": {
+        "type": "npm",
+        "name": "npm:@angular/compiler",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/compiler",
+          "files": []
+        }
+      },
+      "npm:@angular/core": {
+        "type": "npm",
+        "name": "npm:@angular/core",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/core",
+          "files": []
+        }
+      },
+      "npm:@angular/forms": {
+        "type": "npm",
+        "name": "npm:@angular/forms",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/forms",
+          "files": []
+        }
+      },
+      "npm:@angular/localize": {
+        "type": "npm",
+        "name": "npm:@angular/localize",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/localize",
+          "files": []
+        }
+      },
+      "npm:@angular/material": {
+        "type": "npm",
+        "name": "npm:@angular/material",
+        "data": {
+          "version": "^9.2.4",
+          "packageName": "@angular/material",
+          "files": []
+        }
+      },
+      "npm:@angular/platform-browser": {
+        "type": "npm",
+        "name": "npm:@angular/platform-browser",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/platform-browser",
+          "files": []
+        }
+      },
+      "npm:@angular/platform-browser-dynamic": {
+        "type": "npm",
+        "name": "npm:@angular/platform-browser-dynamic",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/platform-browser-dynamic",
+          "files": []
+        }
+      },
+      "npm:@angular/router": {
+        "type": "npm",
+        "name": "npm:@angular/router",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/router",
+          "files": []
+        }
+      },
+      "npm:@ng-bootstrap/ng-bootstrap": {
+        "type": "npm",
+        "name": "npm:@ng-bootstrap/ng-bootstrap",
+        "data": {
+          "version": "^6.1.0",
+          "packageName": "@ng-bootstrap/ng-bootstrap",
+          "files": []
+        }
+      },
+      "npm:@nrwl/angular": {
+        "type": "npm",
+        "name": "npm:@nrwl/angular",
+        "data": {
+          "version": "9.5.1",
+          "packageName": "@nrwl/angular",
+          "files": []
+        }
+      },
+      "npm:bootstrap": {
+        "type": "npm",
+        "name": "npm:bootstrap",
+        "data": {
+          "version": "^4.5.2",
+          "packageName": "bootstrap",
+          "files": []
+        }
+      },
+      "npm:jquery": {
+        "type": "npm",
+        "name": "npm:jquery",
+        "data": {
+          "version": "^3.5.1",
+          "packageName": "jquery",
+          "files": []
+        }
+      },
+      "npm:rxjs": {
+        "type": "npm",
+        "name": "npm:rxjs",
+        "data": {
+          "version": "~6.5.4",
+          "packageName": "rxjs",
+          "files": []
+        }
+      },
+      "npm:zone.js": {
+        "type": "npm",
+        "name": "npm:zone.js",
+        "data": {
+          "version": "^0.10.2",
+          "packageName": "zone.js",
+          "files": []
+        }
+      },
+      "npm:@angular/cli": {
+        "type": "npm",
+        "name": "npm:@angular/cli",
+        "data": {
+          "version": "9.1.0",
+          "packageName": "@angular/cli",
+          "files": []
+        }
+      },
+      "npm:@nrwl/workspace": {
+        "type": "npm",
+        "name": "npm:@nrwl/workspace",
+        "data": {
+          "version": "9.5.1",
+          "packageName": "@nrwl/workspace",
+          "files": []
+        }
+      },
+      "npm:@types/node": {
+        "type": "npm",
+        "name": "npm:@types/node",
+        "data": {
+          "version": "~8.9.4",
+          "packageName": "@types/node",
+          "files": []
+        }
+      },
+      "npm:dotenv": {
+        "type": "npm",
+        "name": "npm:dotenv",
+        "data": {
+          "version": "6.2.0",
+          "packageName": "dotenv",
+          "files": []
+        }
+      },
+      "npm:ts-node": {
+        "type": "npm",
+        "name": "npm:ts-node",
+        "data": {
+          "version": "~7.0.0",
+          "packageName": "ts-node",
+          "files": []
+        }
+      },
+      "npm:tslint": {
+        "type": "npm",
+        "name": "npm:tslint",
+        "data": {
+          "version": "~6.0.0",
+          "packageName": "tslint",
+          "files": []
+        }
+      },
+      "npm:eslint": {
+        "type": "npm",
+        "name": "npm:eslint",
+        "data": {
+          "version": "6.8.0",
+          "packageName": "eslint",
+          "files": []
+        }
+      },
+      "npm:typescript": {
+        "type": "npm",
+        "name": "npm:typescript",
+        "data": {
+          "version": "~3.8.3",
+          "packageName": "typescript",
+          "files": []
+        }
+      },
+      "npm:prettier": {
+        "type": "npm",
+        "name": "npm:prettier",
+        "data": {
+          "version": "2.0.4",
+          "packageName": "prettier",
+          "files": []
+        }
+      },
+      "npm:@angular/compiler-cli": {
+        "type": "npm",
+        "name": "npm:@angular/compiler-cli",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/compiler-cli",
+          "files": []
+        }
+      },
+      "npm:@angular/language-service": {
+        "type": "npm",
+        "name": "npm:@angular/language-service",
+        "data": {
+          "version": "^9.1.0",
+          "packageName": "@angular/language-service",
+          "files": []
+        }
+      },
+      "npm:@angular-devkit/build-angular": {
+        "type": "npm",
+        "name": "npm:@angular-devkit/build-angular",
+        "data": {
+          "version": "0.901.0",
+          "packageName": "@angular-devkit/build-angular",
+          "files": []
+        }
+      },
+      "npm:codelyzer": {
+        "type": "npm",
+        "name": "npm:codelyzer",
+        "data": {
+          "version": "~5.0.1",
+          "packageName": "codelyzer",
+          "files": []
+        }
+      },
+      "npm:jest-preset-angular": {
+        "type": "npm",
+        "name": "npm:jest-preset-angular",
+        "data": {
+          "version": "8.1.2",
+          "packageName": "jest-preset-angular",
+          "files": []
+        }
+      },
+      "npm:@nrwl/jest": {
+        "type": "npm",
+        "name": "npm:@nrwl/jest",
+        "data": {
+          "version": "9.5.1",
+          "packageName": "@nrwl/jest",
+          "files": []
+        }
+      },
+      "npm:jest": {
+        "type": "npm",
+        "name": "npm:jest",
+        "data": {
+          "version": "25.2.3",
+          "packageName": "jest",
+          "files": []
+        }
+      },
+      "npm:@types/jest": {
+        "type": "npm",
+        "name": "npm:@types/jest",
+        "data": {
+          "version": "25.1.4",
+          "packageName": "@types/jest",
+          "files": []
+        }
+      },
+      "npm:ts-jest": {
+        "type": "npm",
+        "name": "npm:ts-jest",
+        "data": {
+          "version": "25.2.1",
+          "packageName": "ts-jest",
+          "files": []
+        }
+      },
+      "npm:cypress": {
+        "type": "npm",
+        "name": "npm:cypress",
+        "data": {
+          "version": "^4.1.0",
+          "packageName": "cypress",
+          "files": []
+        }
+      },
+      "npm:@nrwl/cypress": {
+        "type": "npm",
+        "name": "npm:@nrwl/cypress",
+        "data": {
+          "version": "9.5.1",
+          "packageName": "@nrwl/cypress",
+          "files": []
+        }
+      }
+    },
+    "dependencies": {
+      "my-student-app/my-stedent-e2e": [
+        {
+          "type": "implicit",
+          "source": "my-student-app/my-stedent-e2e",
+          "target": "my-student-app-my-stedent"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app/my-stedent-e2e",
+          "target": "npm:@nrwl/cypress"
+        }
+      ],
+      "my-student-app-my-stedent": [
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "theme"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/platform-browser"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@ng-bootstrap/ng-bootstrap"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/platform-browser-dynamic"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/localize"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:zone.js"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:jest-preset-angular"
+        }
+      ],
+      "theme": [
+        {
+          "type": "static",
+          "source": "theme",
+          "target": "npm:@angular/core"
+        },
+        {
+          "type": "static",
+          "source": "theme",
+          "target": "npm:@angular/material"
+        },
+        {
+          "type": "static",
+          "source": "theme",
+          "target": "npm:@angular/router"
+        },
+        {
+          "type": "static",
+          "source": "theme",
+          "target": "npm:@angular/common"
+        },
+        {
+          "type": "static",
+          "source": "theme",
+          "target": "npm:jest-preset-angular"
+        }
+      ],
+      "npm:@angular/animations": [],
+      "npm:@angular/cdk": [],
+      "npm:@angular/common": [],
+      "npm:@angular/compiler": [],
+      "npm:@angular/core": [],
+      "npm:@angular/forms": [],
+      "npm:@angular/localize": [],
+      "npm:@angular/material": [],
+      "npm:@angular/platform-browser": [],
+      "npm:@angular/platform-browser-dynamic": [],
+      "npm:@angular/router": [],
+      "npm:@ng-bootstrap/ng-bootstrap": [],
+      "npm:@nrwl/angular": [],
+      "npm:bootstrap": [],
+      "npm:jquery": [],
+      "npm:rxjs": [],
+      "npm:zone.js": [],
+      "npm:@angular/cli": [],
+      "npm:@nrwl/workspace": [],
+      "npm:@types/node": [],
+      "npm:dotenv": [],
+      "npm:ts-node": [],
+      "npm:tslint": [],
+      "npm:eslint": [],
+      "npm:typescript": [],
+      "npm:prettier": [],
+      "npm:@angular/compiler-cli": [],
+      "npm:@angular/language-service": [],
+      "npm:@angular-devkit/build-angular": [],
+      "npm:codelyzer": [],
+      "npm:jest-preset-angular": [],
+      "npm:@nrwl/jest": [],
+      "npm:jest": [],
+      "npm:@types/jest": [],
+      "npm:ts-jest": [],
+      "npm:cypress": [],
+      "npm:@nrwl/cypress": []
+    }
+  },
+  "fileMap": {
+    "my-student-app/my-stedent-e2e": [
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/cypress.json",
+        "ext": ".json",
+        "mtime": 1593778845658.843
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/src/fixtures/example.json",
+        "ext": ".json",
+        "mtime": 1593778845660.432
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/src/integration/app.spec.ts",
+        "ext": ".ts",
+        "mtime": 1593778845661.173
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/src/plugins/index.js",
+        "ext": ".js",
+        "mtime": 1593778845662.086
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/src/support/app.po.ts",
+        "ext": ".ts",
+        "mtime": 1593778845663.032
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/src/support/commands.ts",
+        "ext": ".ts",
+        "mtime": 1593778845663.579
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/src/support/index.ts",
+        "ext": ".ts",
+        "mtime": 1593778845664.105
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/tsconfig.e2e.json",
+        "ext": ".json",
+        "mtime": 1593778845659.192
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1593778845659.55
+      },
+      {
+        "file": "apps/my-student-app/my-stedent-e2e/tslint.json",
+        "ext": ".json",
+        "mtime": 1593778845658.523
+      }
+    ],
+    "my-student-app-my-stedent": [
+      {
+        "file": "apps/my-student-app/my-stedent/browserslist",
+        "ext": "",
+        "mtime": 1593778845652.933
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/jest.config.js",
+        "ext": ".js",
+        "mtime": 1593778845657.2
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/app-routing.module.ts",
+        "ext": ".ts",
+        "mtime": 1597812554300.49
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/app.component.html",
+        "ext": ".html",
+        "mtime": 1597812554327.374
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/app.component.scss",
+        "ext": ".scss",
+        "mtime": 1580372164333.633
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/app.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1597812554333.257
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/app.component.ts",
+        "ext": ".ts",
+        "mtime": 1597812554343.154
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/app.module.ts",
+        "ext": ".ts",
+        "mtime": 1597812554348.354
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.css",
+        "ext": ".css",
+        "mtime": 1597219269685.458
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.html",
+        "ext": ".html",
+        "mtime": 1597219269686.102
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1597219269685.816
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.ts",
+        "ext": ".ts",
+        "mtime": 1597219269686.292
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.html",
+        "ext": ".html",
+        "mtime": 1593941445917.637
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.scss",
+        "ext": ".scss",
+        "mtime": 1593941445917.044
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1593941445917.934
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.ts",
+        "ext": ".ts",
+        "mtime": 1593941445918.207
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.html",
+        "ext": ".html",
+        "mtime": 1597814320511.9597
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.scss",
+        "ext": ".scss",
+        "mtime": 1597814320511.826
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1593941403335.196
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.ts",
+        "ext": ".ts",
+        "mtime": 1593941403335.523
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/assets/.gitkeep",
+        "ext": "",
+        "mtime": 1593778845654.514
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/environments/environment.prod.ts",
+        "ext": ".ts",
+        "mtime": 1597812554353.499
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/environments/environment.ts",
+        "ext": ".ts",
+        "mtime": 1597812554358.773
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/favicon.ico",
+        "ext": ".ico",
+        "mtime": 1597812554383.293
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/index.html",
+        "ext": ".html",
+        "mtime": 1597812554389.158
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/main.ts",
+        "ext": ".ts",
+        "mtime": 1597812554393.11
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/polyfills.ts",
+        "ext": ".ts",
+        "mtime": 1597812554412.935
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/styles.scss",
+        "ext": ".scss",
+        "mtime": 1597813871412.6262
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1593778845658.012
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/tsconfig.app.json",
+        "ext": ".json",
+        "mtime": 1593778845653.126
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1593778845652.292
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1593778845657.619
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/tslint.json",
+        "ext": ".json",
+        "mtime": 1593778845653.338
+      }
+    ],
+    "theme": [
+      {
+        "file": "libs/theme/README.md",
+        "ext": ".md",
+        "mtime": 1593781079769.765
+      },
+      {
+        "file": "libs/theme/jest.config.js",
+        "ext": ".js",
+        "mtime": 1593781079867.61
+      },
+      {
+        "file": "libs/theme/src/index.ts",
+        "ext": ".ts",
+        "mtime": 1593781079840.348
+      },
+      {
+        "file": "libs/theme/src/lib/components/header/header.component.html",
+        "ext": ".html",
+        "mtime": 1593935972214.137
+      },
+      {
+        "file": "libs/theme/src/lib/components/header/header.component.scss",
+        "ext": ".scss",
+        "mtime": 1593847293016.963
+      },
+      {
+        "file": "libs/theme/src/lib/components/header/header.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1593781428257.232
+      },
+      {
+        "file": "libs/theme/src/lib/components/header/header.component.ts",
+        "ext": ".ts",
+        "mtime": 1593935972215.352
+      },
+      {
+        "file": "libs/theme/src/lib/components/layout/layout.component.html",
+        "ext": ".html",
+        "mtime": 1593935972216.971
+      },
+      {
+        "file": "libs/theme/src/lib/components/layout/layout.component.scss",
+        "ext": ".scss",
+        "mtime": 1593930542601.519
+      },
+      {
+        "file": "libs/theme/src/lib/components/layout/layout.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1593870393111.599
+      },
+      {
+        "file": "libs/theme/src/lib/components/layout/layout.component.ts",
+        "ext": ".ts",
+        "mtime": 1593935972218.654
+      },
+      {
+        "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.html",
+        "ext": ".html",
+        "mtime": 1597814145340.3164
+      },
+      {
+        "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.scss",
+        "ext": ".scss",
+        "mtime": 1593930539430.854
+      },
+      {
+        "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1593871098980.334
+      },
+      {
+        "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.ts",
+        "ext": ".ts",
+        "mtime": 1593941522181.135
+      },
+      {
+        "file": "libs/theme/src/lib/styles/all.scss",
+        "ext": ".scss",
+        "mtime": 1597813881090.153
+      },
+      {
+        "file": "libs/theme/src/lib/styles/core/_grid.scss",
+        "ext": ".scss",
+        "mtime": 1593868527638
+      },
+      {
+        "file": "libs/theme/src/lib/styles/core/core.scss",
+        "ext": ".scss",
+        "mtime": 1593869671150.62
+      },
+      {
+        "file": "libs/theme/src/lib/theme.module.ts",
+        "ext": ".ts",
+        "mtime": 1593941132731.298
+      },
+      {
+        "file": "libs/theme/src/test-setup.ts",
+        "ext": ".ts",
+        "mtime": 1593781079869.782
+      },
+      {
+        "file": "libs/theme/tsconfig.json",
+        "ext": ".json",
+        "mtime": 1593781079865.548
+      },
+      {
+        "file": "libs/theme/tsconfig.lib.json",
+        "ext": ".json",
+        "mtime": 1593781079771.73
+      },
+      {
+        "file": "libs/theme/tsconfig.spec.json",
+        "ext": ".json",
+        "mtime": 1593781079868.838
+      },
+      {
+        "file": "libs/theme/tslint.json",
+        "ext": ".json",
+        "mtime": 1593781079832.677
+      }
+    ]
+  }
+}
