@@ -7,4 +7,5 @@ export class RequestModel {
   RequestDescription: string;
   reqestType: string;
   listItem: Array<string>;
+  IsActive: boolean;
 }

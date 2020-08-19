@@ -24,7 +24,10 @@
         [(ngModel)]="request.hostStartDate"
         class="form-control"
         id="hosStartDate"
-        type="text"
+        type="date"
+        id="start"
+        name="trip-start"
+        value="todaDate"
       />
     </div>
     <div class="col-sm-3 pr-2">
@@ -33,7 +36,10 @@
         [(ngModel)]="request.hostEndDate"
         class="form-control"
         id="hosEndDate"
-        type="text"
+        type="date"
+        id="start"
+        name="trip-start"
+        value="todaDate"
       />
     </div>
   </div>
@@ -43,7 +49,7 @@
         <div class="col-sm-12">
           <label for="ex3">Request Description</label>
           <input
-            [(ngModel)]="request.hostEndDate"
+            [(ngModel)]="request.RequestDescription"
             class="form-control"
             id="ex3"
             type="text"
@@ -60,7 +66,6 @@
               id="request1"
               value="request1"
               (click)="radioChange('request1')"
-              
             />
             <label class="form-check-label" for="request1">
               Request 1
@@ -73,7 +78,6 @@
               name="exampleRadios"
               id="request2"
               value="request2"
-              
               (click)="radioChange('request2')"
             />
             <label class="form-check-label" for="request2">
@@ -87,7 +91,6 @@
               name="exampleRadios"
               id="request3"
               value="request3"
-              
               (click)="radioChange('request3')"
             />
             <label class="form-check-label" for="request3">

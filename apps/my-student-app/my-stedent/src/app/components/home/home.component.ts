@@ -10,6 +10,7 @@ import { RequestTypeService } from '../../services/request-type.service';
 export class HomeComponent implements OnInit {
   request: RequestModel = new RequestModel();
   listData: object = new Object();
+  todaDate: Date = new Date('dd/MM/yyyy');
 
   value: any;
   options = [
@@ -80,11 +81,21 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onSumbit() {}
+  onSumbit() {
+    this.request.listItem = this.list2.map(function (value) {
+      return value.text;
+    });
+    this.request.IsActive = true;
+    console.log('***********', this.request);
+    // this.requestTypeService.createRequest(this.request).subscribe((res) => {
+    //   console.log(res);
+    // });
+  }
 
   onCancel() {}
 
   radioChange(val: string) {
+    this.request.reqestType = val;
     this.list1 = [];
     this.list2 = [];
     if (this.listData[val]) {
