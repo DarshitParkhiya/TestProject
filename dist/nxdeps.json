@@ -235,7 +235,7 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/app.module.ts",
               "ext": ".ts",
-              "mtime": 1597812554348.354
+              "mtime": 1597831502721.6306
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.css",
@@ -280,12 +280,12 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.html",
               "ext": ".html",
-              "mtime": 1597814320511.9597
+              "mtime": 1597819072659.866
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.scss",
               "ext": ".scss",
-              "mtime": 1597814320511.826
+              "mtime": 1597816563547.9814
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.spec.ts",
@@ -295,7 +295,27 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.ts",
               "ext": ".ts",
-              "mtime": 1593941403335.523
+              "mtime": 1597831771029.355
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/models/requestModel.ts",
+              "ext": ".ts",
+              "mtime": 1597815965385.8489
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/models/requestType.ts",
+              "ext": ".ts",
+              "mtime": 1597831173637.4895
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/services/request-type.service.spec.ts",
+              "ext": ".ts",
+              "mtime": 1597820108553.492
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/services/request-type.service.ts",
+              "ext": ".ts",
+              "mtime": 1597831773991.2944
             },
             {
               "file": "apps/my-student-app/my-stedent/src/assets/.gitkeep",
@@ -350,7 +370,7 @@
             {
               "file": "apps/my-student-app/my-stedent/tsconfig.json",
               "ext": ".json",
-              "mtime": 1593778845652.292
+              "mtime": 1597815962117.6082
             },
             {
               "file": "apps/my-student-app/my-stedent/tsconfig.spec.json",
@@ -903,6 +923,21 @@
         {
           "type": "static",
           "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/forms"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:@angular/common"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
+          "target": "npm:rxjs"
+        },
+        {
+          "type": "static",
+          "source": "my-student-app-my-stedent",
           "target": "npm:@angular/platform-browser-dynamic"
         },
         {
@@ -1079,7 +1114,7 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/app.module.ts",
         "ext": ".ts",
-        "mtime": 1597812554348.354
+        "mtime": 1597831502721.6306
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.css",
@@ -1124,12 +1159,12 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.html",
         "ext": ".html",
-        "mtime": 1597814320511.9597
+        "mtime": 1597819072659.866
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.scss",
         "ext": ".scss",
-        "mtime": 1597814320511.826
+        "mtime": 1597816563547.9814
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.spec.ts",
@@ -1139,7 +1174,27 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.ts",
         "ext": ".ts",
-        "mtime": 1593941403335.523
+        "mtime": 1597831771029.355
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/models/requestModel.ts",
+        "ext": ".ts",
+        "mtime": 1597815965385.8489
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/models/requestType.ts",
+        "ext": ".ts",
+        "mtime": 1597831173637.4895
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/services/request-type.service.spec.ts",
+        "ext": ".ts",
+        "mtime": 1597820108553.492
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/services/request-type.service.ts",
+        "ext": ".ts",
+        "mtime": 1597831773991.2944
       },
       {
         "file": "apps/my-student-app/my-stedent/src/assets/.gitkeep",
@@ -1194,7 +1249,7 @@
       {
         "file": "apps/my-student-app/my-stedent/tsconfig.json",
         "ext": ".json",
-        "mtime": 1593778845652.292
+        "mtime": 1597815962117.6082
       },
       {
         "file": "apps/my-student-app/my-stedent/tsconfig.spec.json",

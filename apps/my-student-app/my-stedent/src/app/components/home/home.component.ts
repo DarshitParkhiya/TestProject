@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RequestModel } from '../../models/requestModel';
+import { RequestTypeService } from '../../services/request-type.service';
 
 @Component({
   selector: 'app-home',
@@ -16,12 +17,15 @@ export class HomeComponent implements OnInit {
     { text: 'item 4', selected: false },
     { text: 'item 5', selected: false },
   ];
-  list2 = [    
-  ];
+  list2 = [];
 
-  constructor() {}
+  constructor(private requestTypeService: RequestTypeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.requestTypeService.getRequestByType().subscribe((res) => {
+      console.log('********', res);
+    });
+  }
 
   public toggleSelection(item, list) {
     item.selected = !item.selected;
@@ -55,11 +59,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onSumbit(){
+  onSumbit() {}
 
-  }
-
-  onCancel(){
-    
-  }
+  onCancel() {}
 }
