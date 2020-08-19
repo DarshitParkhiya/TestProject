@@ -9,20 +9,41 @@ import { RequestTypeService } from '../../services/request-type.service';
 })
 export class HomeComponent implements OnInit {
   request: RequestModel = new RequestModel();
+  listData: object = new Object();
+
+  value: any;
+  options = [
+    {
+      id: 'request1',
+      value: '',
+    },
+    {
+      id: 'request2',
+      value: '',
+    },
+    {
+      id: 'request3',
+      value: '',
+    },
+    {
+      id: 'request4',
+      value: '',
+    },
+  ];
 
   list1 = [
-    { text: 'item 1', selected: false },
-    { text: 'item 2', selected: false },
-    { text: 'item 3', selected: false },
-    { text: 'item 4', selected: false },
-    { text: 'item 5', selected: false },
+    // { text: 'item 1', selected: false },
+    // { text: 'item 2', selected: false },
+    // { text: 'item 3', selected: false },
+    // { text: 'item 4', selected: false },
+    // { text: 'item 5', selected: false },
   ];
   list2 = [];
 
   constructor(private requestTypeService: RequestTypeService) {}
 
   ngOnInit(): void {
-    this.requestTypeService.getRequestByType().subscribe((res) => {
+    this.requestTypeService.getAllRequestType().subscribe((res) => {
       console.log('********', res);
     });
   }
@@ -62,4 +83,20 @@ export class HomeComponent implements OnInit {
   onSumbit() {}
 
   onCancel() {}
+
+  radioChange(val: string) {
+    this.list1 = [];
+    this.list2 = [];
+    if (this.listData[val]) {
+    } else {
+      this.requestTypeService.getRequestByType(val).subscribe((res) => {
+        const list: any = [];
+        res.listItem.forEach((ele) => {
+          list.push({ text: ele, selected: false });
+        });
+        this.listData[res.type] = list;
+        this.list1 = this.listData[res.type];
+      });
+    }
+  }
 }

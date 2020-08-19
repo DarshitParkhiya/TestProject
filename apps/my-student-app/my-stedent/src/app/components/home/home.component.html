@@ -59,7 +59,8 @@
               name="exampleRadios"
               id="request1"
               value="request1"
-              [(ngModel)]="request.reqestType"
+              (click)="radioChange('request1')"
+              
             />
             <label class="form-check-label" for="request1">
               Request 1
@@ -72,7 +73,8 @@
               name="exampleRadios"
               id="request2"
               value="request2"
-              [(ngModel)]="request.reqestType"
+              
+              (click)="radioChange('request2')"
             />
             <label class="form-check-label" for="request2">
               Request 2
@@ -85,7 +87,8 @@
               name="exampleRadios"
               id="request3"
               value="request3"
-              [(ngModel)]="request.reqestType"
+              
+              (click)="radioChange('request3')"
             />
             <label class="form-check-label" for="request3">
               Request 3
@@ -98,7 +101,7 @@
               name="exampleRadios"
               id="request4"
               value="request4"
-              [(ngModel)]="request.reqestType"
+              (click)="radioChange('request4')"
             />
             <label class="form-check-label" for="request4">
               Request 4

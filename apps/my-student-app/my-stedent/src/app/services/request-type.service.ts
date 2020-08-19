@@ -13,8 +13,13 @@ export class RequestTypeService {
 
   constructor(private http: HttpClient) {}
 
-  getRequestByType(): Observable<RequestType[]> {
+  getAllRequestType(): Observable<RequestType[]> {
     return this.http.get<RequestType[]>(`${this.areasUrl}/get`);
   }
-    
+
+  getRequestByType(type: string): Observable<RequestType> {
+    return this.http.get<RequestType>(
+      `${this.areasUrl}/getByType?type=${type}`
+    );
+  }
 }
