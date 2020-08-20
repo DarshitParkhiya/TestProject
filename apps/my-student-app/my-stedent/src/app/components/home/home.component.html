@@ -119,8 +119,8 @@
           LIST 1
           <li
             *ngFor="let item of list1"
-            [ngClass]="item.selected ? 'item-selected' : ''"
             (click)="toggleSelection(item, 1)"
+            [ngClass]="item.selected ? 'my-class' : ''"
           >
             {{ item.text }}
           </li>
@@ -135,8 +135,8 @@
           LIST 2
           <li
             *ngFor="let item of list2"
-            [class.item-selected]="item.selected"
             (click)="toggleSelection(item, 2)"
+            [ngClass]="item.selected ? 'my-class' : ''"
           >
             {{ item.text }}
           </li>

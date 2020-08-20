@@ -210,7 +210,7 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/app-routing.module.ts",
               "ext": ".ts",
-              "mtime": 1597812554300.49
+              "mtime": 1597898035596.0325
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/app.component.html",
@@ -235,7 +235,7 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/app.module.ts",
               "ext": ".ts",
-              "mtime": 1597854800186.4648
+              "mtime": 1597900863949.0847
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.css",
@@ -260,12 +260,12 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.html",
               "ext": ".html",
-              "mtime": 1597855131732.2246
+              "mtime": 1597897166666.9585
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.scss",
               "ext": ".scss",
-              "mtime": 1593941445917.044
+              "mtime": 1597897066648.4812
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.spec.ts",
@@ -275,17 +275,17 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.ts",
               "ext": ".ts",
-              "mtime": 1597854800185.6484
+              "mtime": 1597896189685.7964
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.html",
               "ext": ".html",
-              "mtime": 1597852783409.6921
+              "mtime": 1597900909557.8916
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.scss",
               "ext": ".scss",
-              "mtime": 1597816563547.9814
+              "mtime": 1597900303493.1667
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.spec.ts",
@@ -295,12 +295,32 @@
             {
               "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.ts",
               "ext": ".ts",
-              "mtime": 1597854239601.0593
+              "mtime": 1597899287024.4229
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.html",
+              "ext": ".html",
+              "mtime": 1597898426578.447
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.scss",
+              "ext": ".scss",
+              "mtime": 1597897972005.9233
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.spec.ts",
+              "ext": ".ts",
+              "mtime": 1597897972006.7185
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.ts",
+              "ext": ".ts",
+              "mtime": 1597899718952.6406
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/models/requestModel.ts",
               "ext": ".ts",
-              "mtime": 1597853644450.9045
+              "mtime": 1597896472103.4238
             },
             {
               "file": "apps/my-student-app/my-stedent/src/app/models/requestType.ts",
@@ -316,6 +336,16 @@
               "file": "apps/my-student-app/my-stedent/src/app/services/request-type.service.ts",
               "ext": ".ts",
               "mtime": 1597854800197.6436
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/services/user.service.spec.ts",
+              "ext": ".ts",
+              "mtime": 1597898152587.0044
+            },
+            {
+              "file": "apps/my-student-app/my-stedent/src/app/services/user.service.ts",
+              "ext": ".ts",
+              "mtime": 1597898326814.165
             },
             {
               "file": "apps/my-student-app/my-stedent/src/assets/.gitkeep",
@@ -482,7 +512,7 @@
             {
               "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.html",
               "ext": ".html",
-              "mtime": 1597814145340.3164
+              "mtime": 1597899789776.027
             },
             {
               "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.scss",
@@ -497,7 +527,7 @@
             {
               "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.ts",
               "ext": ".ts",
-              "mtime": 1593941522181.135
+              "mtime": 1597899617279.243
             },
             {
               "file": "libs/theme/src/lib/styles/all.scss",
@@ -1089,7 +1119,7 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/app-routing.module.ts",
         "ext": ".ts",
-        "mtime": 1597812554300.49
+        "mtime": 1597898035596.0325
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/app.component.html",
@@ -1114,7 +1144,7 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/app.module.ts",
         "ext": ".ts",
-        "mtime": 1597854800186.4648
+        "mtime": 1597900863949.0847
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/asset-lifecycle/asset-lifecycle.component.css",
@@ -1139,12 +1169,12 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.html",
         "ext": ".html",
-        "mtime": 1597855131732.2246
+        "mtime": 1597897166666.9585
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.scss",
         "ext": ".scss",
-        "mtime": 1593941445917.044
+        "mtime": 1597897066648.4812
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.spec.ts",
@@ -1154,17 +1184,17 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/dashboard/dashboard.component.ts",
         "ext": ".ts",
-        "mtime": 1597854800185.6484
+        "mtime": 1597896189685.7964
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.html",
         "ext": ".html",
-        "mtime": 1597852783409.6921
+        "mtime": 1597900909557.8916
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.scss",
         "ext": ".scss",
-        "mtime": 1597816563547.9814
+        "mtime": 1597900303493.1667
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.spec.ts",
@@ -1174,12 +1204,32 @@
       {
         "file": "apps/my-student-app/my-stedent/src/app/components/home/home.component.ts",
         "ext": ".ts",
-        "mtime": 1597854239601.0593
+        "mtime": 1597899287024.4229
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.html",
+        "ext": ".html",
+        "mtime": 1597898426578.447
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.scss",
+        "ext": ".scss",
+        "mtime": 1597897972005.9233
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.spec.ts",
+        "ext": ".ts",
+        "mtime": 1597897972006.7185
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/components/login/login.component.ts",
+        "ext": ".ts",
+        "mtime": 1597899718952.6406
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/models/requestModel.ts",
         "ext": ".ts",
-        "mtime": 1597853644450.9045
+        "mtime": 1597896472103.4238
       },
       {
         "file": "apps/my-student-app/my-stedent/src/app/models/requestType.ts",
@@ -1195,6 +1245,16 @@
         "file": "apps/my-student-app/my-stedent/src/app/services/request-type.service.ts",
         "ext": ".ts",
         "mtime": 1597854800197.6436
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/services/user.service.spec.ts",
+        "ext": ".ts",
+        "mtime": 1597898152587.0044
+      },
+      {
+        "file": "apps/my-student-app/my-stedent/src/app/services/user.service.ts",
+        "ext": ".ts",
+        "mtime": 1597898326814.165
       },
       {
         "file": "apps/my-student-app/my-stedent/src/assets/.gitkeep",
@@ -1321,7 +1381,7 @@
       {
         "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.html",
         "ext": ".html",
-        "mtime": 1597814145340.3164
+        "mtime": 1597899789776.027
       },
       {
         "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.scss",
@@ -1336,7 +1396,7 @@
       {
         "file": "libs/theme/src/lib/components/side-navbar/side-navbar.component.ts",
         "ext": ".ts",
-        "mtime": 1593941522181.135
+        "mtime": 1597899617279.243
       },
       {
         "file": "libs/theme/src/lib/styles/all.scss",
