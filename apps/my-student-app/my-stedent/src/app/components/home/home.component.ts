@@ -12,6 +12,8 @@ export class HomeComponent implements OnInit {
   request: RequestModel = new RequestModel();
   listData: object = new Object();
   todaDate: Date = new Date('dd/MM/yyyy');
+  userName = '';
+  userEmailId = '';
 
   value: any;
   options = [
@@ -49,7 +51,8 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.requestTypeService.getAllRequestType().subscribe((res) => {});
+    this.request.requestrName = localStorage.getItem('userName');
+    this.request.requestrEmail = localStorage.getItem('userEmailId');
   }
 
   public toggleSelection(item, list): void {

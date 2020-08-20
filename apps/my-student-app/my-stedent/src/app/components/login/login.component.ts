@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 
@@ -14,16 +14,19 @@ export class LoginComponent implements OnInit {
   constructor(private router: Router, private userService: UserService) {}
 
   ngOnInit() {
-    sessionStorage.removeItem('UserName');
-    sessionStorage.clear();
+    localStorage.clear();
   }
+
   login() {
     debugger;
     // this.userService.Login(this.model).subscribe(
     //   (data) => {
-        // debugger;
-        // if (data.Status == 'Success') {
-          this.router.navigate(['/dashboard']);
+    // debugger;
+    // if (data.Status == 'Success') {
+    localStorage.clear();
+    localStorage.setItem('userName', 'Darshit');
+    localStorage.setItem('userEmailId', 'darshit@gmail.com');
+    this.router.navigate(['/dashboard']);
     //       debugger;
     //     } else {
     //       this.errorMessage = data.Message;

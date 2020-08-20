@@ -8,14 +8,15 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class SideNavbarComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
-
+  userName = '';
   isExpanded = true;
   showSubmenu = false;
   isShowing = false;
   showSubSubMenu = false;
 
   ngOnInit(): void {
-
+    
+    this.userName = localStorage.getItem('userName');
   }
 
   mouseenter() {
