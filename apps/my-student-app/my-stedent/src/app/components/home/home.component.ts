@@ -96,7 +96,7 @@ export class HomeComponent implements OnInit {
   }
 
   gotoDasboard(): void {
-    this.router.navigate(['/'], {
+    this.router.navigate(['/dashboard'], {
       relativeTo: this.route,
     });
   }
