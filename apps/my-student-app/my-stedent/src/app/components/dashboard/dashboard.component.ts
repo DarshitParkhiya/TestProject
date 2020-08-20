@@ -11,9 +11,11 @@ export class DashboardComponent implements OnInit {
   request: RequestModel[] = [];
   constructor(private requestTypeService: RequestTypeService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getData();
+  }
 
-  getDate() {
+  getData(): void {
     this.requestTypeService.getAllRequest().subscribe((res) => {
       this.request = res;
     });

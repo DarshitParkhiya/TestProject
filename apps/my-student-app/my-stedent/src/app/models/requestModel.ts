@@ -4,8 +4,8 @@ export class RequestModel {
   requestrEmail: string;
   hostStartDate: string;
   hostEndDate: string;
-  RequestDescription: string;
+  requestDescription: string;
   reqestType: string;
   listItem: Array<string>;
-  IsActive: boolean;
+  isActive: boolean;
 }

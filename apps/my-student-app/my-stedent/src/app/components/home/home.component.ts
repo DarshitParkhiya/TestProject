@@ -49,16 +49,14 @@ export class HomeComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.requestTypeService.getAllRequestType().subscribe((res) => {
-      console.log('********', res);
-    });
+    this.requestTypeService.getAllRequestType().subscribe((res) => {});
   }
 
-  public toggleSelection(item, list) {
+  public toggleSelection(item, list): void {
     item.selected = !item.selected;
   }
 
-  public moveSelected(direction) {
+  public moveSelected(direction): void {
     if (direction === 'left') {
       this.list2.forEach((item) => {
         if (item.selected) {
@@ -76,7 +74,7 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  public moveAll(direction) {
+  public moveAll(direction): void {
     if (direction === 'left') {
       this.list1 = [...this.list1, ...this.list2];
       this.list2 = [];
@@ -86,27 +84,33 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  onSumbit() {
+  onSumbit(): void {
     this.request.listItem = this.list2.map(function (value) {
       return value.text;
     });
-    this.request.IsActive = true;
-    console.log('***********', this.request);
+    this.request.isActive = true;
     this.requestTypeService.createRequest(this.request).subscribe((res) => {
       console.log(res);
     });
-    this.router.navigate(['./dashboard'], {
+    this.gotoDasboard();
+  }
+
+  gotoDasboard(): void {
+    this.router.navigate(['/'], {
       relativeTo: this.route,
     });
   }
 
-  onCancel() {}
+  onCancel(): void {
+    this.gotoDasboard();
+  }
 
-  radioChange(val: string) {
+  radioChange(val: string): void {
     this.request.reqestType = val;
     this.list1 = [];
     this.list2 = [];
     if (this.listData[val]) {
+      this.list1 = this.listData[val];
     } else {
       this.requestTypeService.getRequestByType(val).subscribe((res) => {
         const list: any = [];
